@@ -1,7 +1,7 @@
 # HTML/CSS Compass
 <span style="color:rebeccapurple">A personal collection for HTML and CSS projects/ideas/templates</span> 
 
-######[zu deutsch](#deutsche-version)
+###### [zu deutsch](#deutsche-version)
 ##### *English*
 
 ### Overview
