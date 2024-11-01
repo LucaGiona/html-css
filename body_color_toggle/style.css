@@ -1,0 +1,65 @@
+* {
+ box-sizing: border-box;
+ margin: 0;
+}
+
+:root {
+ --clr-txt: black;
+ --clr-bg: pink;
+}
+body {
+ background-color: aqua;
+}
+/* eingefügt Color Änderung für Label */
+label{
+ background-color: blueviolet;
+ color:azure;
+}
+html, body, .content {
+ height: 100%;
+}
+
+.content {
+ color: var(--clr-txt);
+ background-color: var(--clr-bg);
+}
+
+#toggle {
+ all: unset;
+}
+
+#toggle:checked + label + .content {
+ --clr-txt: white;
+ --clr-bg: black;
+}
+
+label {
+ display: inline-block ;
+}
+
+.sr-only {
+ font-size: 0;
+ position: absolute;
+}
+
+.toggle-wrapper {
+ border: 2px solid black;
+ border-radius: 2rem;
+ width: 30px;
+ height: 1rem;
+ padding: .125rem;
+
+ display: flex;
+}
+
+.toggle-ball {
+ background-color: black;
+
+ height: 100%;
+ aspect-ratio: 1;
+ border-radius: 50%;
+}
+
+#toggle:checked + label .toggle-wrapper {
+ justify-content: end;
+}

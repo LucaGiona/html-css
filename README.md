@@ -10,6 +10,7 @@ The **HTML/CSS Compass** serves as a personal guide to explore various HTML cons
 ### Subfolder Guide
 - **Table_List**: Artistic and playful table designs, customizable in layout and style.
 - **High Adventure**: Landingpage playing with background- img and links
+- **body_color**: toggle with CSS only - background color change
 
 
 ### Installation
@@ -29,8 +30,8 @@ Der **HTML/CSS Kompass** dient als eine persönliche Sammlung und Leitfaden, um 
 
 ### Unterordner-Leitfaden
 - **Table_List**: Künstlerische und spielerische Tabellendesigns durch Listen, anpassbar in Layout und Stil.
-- **High Adventure**: Landingpage mit Hintergrundbild-Spielereien und Links
-(Paragliding)
+- **High Adventure**: Landingpage mit Hintergrundbild-Spielereien und Links (Paragliding)
+- **body_color**: toggle nur mit CSS - Hintergrundfarbveränderung
   
 
 ### Installation
