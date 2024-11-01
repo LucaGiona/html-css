@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html x-data="{ darkmode: false }" :class="darkmode ? 'dark' : '' " lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Miniprojekt</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="tailwind.css">
+  <link rel="stylesheet" href="basic.css">
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+</head>
+
+<body class="bg-hauptfarbe">
+  <div class="container min-h-screen px-6 py-6 mx-auto bg-gray-100 dark:bg-gray-900 lg:py-8 xl:py-10">
+
+    <div id="darkButton" class="mb-4">
+      <button @click="darkmode = !darkmode"
+        class="ml-auto btn btn-icon btn-gray focus:outline-none ">
+        <!-- Sonne -->
+        <svg x-show="darkmode" class="h-6 mr-1 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+          fill="currentColor">
+          <path fill-rule="evenodd"
+            d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+            clip-rule="evenodd" />
+        </svg>
+        <!-- Mond -->
+        <svg x-show="!darkmode" class="h-6 mr-1 text-indigo-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+          fill="currentColor">
+          <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+        </svg>
+        <span x-text="darkmode ? '' : 'Zum Nachtmodus' " class="leading-6"></span>
+      </button>
+    </div>
+
+    <!-- Seitenkopf / Überschriften -->
+     
+    <section id="top">
+      <div class="mb-8 text-center">
+        <h1 class="text-3xl leading-snug xl:leading-relaxed md:text-4xl lg:text-5xl">Thomas Schmidt-Gonzales
+          Hometraining<br>
+          <span class="text-4xl italic text-indigo-900 dark:text-indigo-200 sm:text-5xl lg:text-7xl opacity-80">
+            <q>&nbsp;Ich bring Dich in Form!&nbsp;</q>
+          </span>
+
+        </h1>
+        <h2 class="text-2xl lg:text-3xl">Muskelaufbau &middot; Funktionales Training &middot; Ernährungsberatung</h2>
+      </div>
+    </section>
+
+
+    <section class="grid gap-5 sm:grid-cols-2 lg:gap-10 xl:w-8/12 xl:mx-auto" id="bild_leistungen">
+
+      <!-- Bild -->
+      <div class="mx-auto sm:ml-auto" id="bild">
+        <img src="/Tailwind-Exercise/dist/img/tom.jpg" alt="Thomas Schmidt Online-Trainer">
+      </div>
+
+      <!-- Leistungen -->
+      <div id="leistungen">
+        <h3 class="text-xl lg:text-2xl">Ich biete Dir:</h3>
+        <ul class="ml-8 list-disc">
+          <li class="mb-4 text-base md:text-xl">Unterricht per Skype und du kannst alle Sessions aufnehmen und später
+            noch einmal ansehen.</li>
+          <li class="mb-4 text-base md:text-xl">Ganzheitliches Ganzkörpertraining</li>
+          <li class="mb-4 text-base md:text-xl">Training ohne Geräte</li>
+          <li class="mb-4 text-base md:text-xl">Schmerzreduktion</li>
+          <li class="mb-4 text-base md:text-xl">Maßgeschneiderte Ernährungspläne</li>
+        </ul>
+        <section class="hidden md:block" id="qualifikationen_rechts">
+          <h3 class="mt-10 text-xl lg:text-2xl">Meine Qualifikationen:</h3>
+          <ul class="ml-8 list-disc">
+            <li class="mb-4 text-base md:text-xl">Zertifizierter Ernährungsberater</li>
+            <li class="mb-4 text-base md:text-xl">Zertifizierter Fitnesstrainer</li>
+            <li class="mb-4 text-base md:text-xl">5 Jahre Erfahrung im 1:1 - Training</li>
+          </ul>
+        </section>
+
+      </div>
+    </section>
+
+    <section class="md:hidden" id="qualifikationen_unten">
+      <h3 class="mt-4 text-xl sm:mt-6 lg:text-2xl">Meine Qualifikationen:</h3>
+      <ul class="ml-8 list-disc">
+        <li class="mb-4 text-base md:text-xl">Zertifizierter Ernährungsberater</li>
+        <li class="mb-4 text-base md:text-xl">Zertifizierter Fitnesstrainer</li>
+        <li class="mb-4 text-base md:text-xl">5 Jahre Erfahrung im 1:1 - Training</li>
+      </ul>
+    </section>
+
+    <!-- Preise und Bezahlung -->
+    <section class="mt-8 md:mt-10" id="preise_bezahlung">
+      <div class="mx-auto lg:w-8/12 2xl:w-7/12">
+        <h2 class="text-2xl lg:text-3xl">Preise und Bezahlung</h2>
+        <p>Mein wichtigstes Ziel ist, daß du mit Deinen Zielen voran kommst.</p>
+        <p class="text-justify">In einer kostenlosen Anfangssession besprechen wir, was du erreichen willst und wieviel
+          du maximal ausgeben möchtest oder kannst. Dann finden wir garantiert eine Lösung, die zu Dir passt.</p>
+      </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section class="mt-10 mb-10 lg:mt-12 xl:mt-10" id="kontakt">
+      <div class="flex justify-evenly lg:flex-none lg:grid lg:w-8/12 2xl:w-7/12 lg:grid-cols-2 lg:mx-auto">
+        <div id="email">
+          <p>Schreibe mir auf:</p>
+          <a class="flex items-center px-4 py-2 transition bg-gray-300 rounded shadow-sm dark:hover:bg-gray-600 dark:bg-gray-500 dark:text-white w-max ring-blue-400px-4 block-inline hover:bg-gray-400 hover:shadow-none focus:ring-2 focus:ring-yellow-500"
+            href="#">
+            <svg class="h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+              class="feather feather-at-sign">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"></path>
+            </svg>
+            Email senden</a>
+        </div>
+        <div id="whatsApp_telefon">
+          <p>WhatsApp:</p>
+          <span class="dark:text-gray-200">0275 / 555 44 33</span>
+        </div>
+      </div>
+
+    </section>
+  </div>
+</body>
+
+</html>

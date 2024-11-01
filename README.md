@@ -11,6 +11,8 @@ The **HTML/CSS Compass** serves as a personal guide to explore various HTML cons
 - **Table_List**: Artistic and playful table designs, customizable in layout and style.
 - **High Adventure**: Landingpage playing with background- img and links
 - **body_color**: toggle with CSS only - background color change
+- **coffee_master**: exercise built a shop layout
+- **Tailwind**: Udemy Tailwind Course
 
 
 ### Installation
@@ -32,6 +34,8 @@ Der **HTML/CSS Kompass** dient als eine persönliche Sammlung und Leitfaden, um 
 - **Table_List**: Künstlerische und spielerische Tabellendesigns durch Listen, anpassbar in Layout und Stil.
 - **High Adventure**: Landingpage mit Hintergrundbild-Spielereien und Links (Paragliding)
 - **body_color**: toggle nur mit CSS - Hintergrundfarbveränderung
+- - **coffee_master**: exercise built a shop layout
+- **Tailwind**: Udemy Tailwind Kurs
   
 
 ### Installation
