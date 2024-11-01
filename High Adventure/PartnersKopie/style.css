@@ -1,0 +1,234 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #06579e;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 0;
+}
+
+#balken-gelb {
+  height: 2vh;
+  background-color: #fcaf17;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.header {
+  
+  background-color: #c9d9e8;
+   border-top-right-radius: 10px;
+   border-top-left-radius: 10px;
+   opacity: .6;
+
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-wrap: nowrap;
+  padding-right: 2em;
+}
+
+.partners-box{
+  display: flex;
+  align-items: center;
+  justify-content: end;
+ 
+  margin-right: 1em;
+}
+
+.partners{
+  font-size: 0.6rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: inherit;
+  letter-spacing: 1px;
+  border: none;
+  background-color: inherit;
+}
+.nav{background-color: white;
+    border-bottom-right-radius: 10px;
+   border-bottom-left-radius: 10px;
+   overflow: hidden;
+}
+
+.header-nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style-type: none;
+
+}
+
+li {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 1.5vh 1.7vh;
+}
+
+li:hover,
+li:focus {
+  cursor: pointer;
+  background-color: #fcaf17;
+  color: white;
+}
+
+/* ANCHOR Logo */
+#logo-highAdventure {
+  max-width: 20%;
+ 
+ margin:4vh 2vh;
+  
+}
+
+/* ANCHOR Background Pic */
+#backgroundImg {
+  position: relative;
+}
+
+#backgroundImg::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("pics/testGlidderPic.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position:  top;
+  z-index: -1;
+  margin-top: 22vh;
+  height: 100%;
+  width: 100vw;
+}
+
+/* ANCHOR info-text */
+
+.info-text{
+  background-color: rgba(201, 217, 232, .8);
+
+  border-radius: 50px;
+ 
+  margin-top: 40vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  
+}
+
+
+.berge{
+ width: 90%;
+  margin: 0 auto;
+  border-radius: 10px;
+  
+ 
+}
+h2{
+ margin-left: 0;
+ text-align: left;
+}
+p,
+ article,
+h2{
+  margin: 2rem;
+}
+
+/* ANCHOR bottom Logos */
+
+.container-content-links{
+ margin-top: 2rem;
+
+ display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+ justify-content: space-around;
+ align-items: center;
+ gap: 10px;
+
+ 
+}
+.logo-size{
+ align-items: center;
+ height: 6em;
+ width: 14em;
+ padding:1em ;
+
+  border: 2px solid black;
+  border-radius: 40px;
+  background-color: #fcaf17;
+
+  cursor: pointer;
+ 
+
+}
+
+.partners-bottom{
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* hidden Logos */
+button{
+ padding:.61rem 2rem;
+ border-radius: 10px;
+ text-decoration: none;
+ background-color: inherit;
+}
+
+.container-content{
+ margin-top: 2rem;
+
+ display: none;
+ flex-direction: column;
+ justify-content: space-around;
+ align-items: center;
+ gap: 10px;
+ 
+}
+.toggle-partners{
+ background-color:inherit;
+ 
+ display: flex;
+ justify-content: flex-end;
+ align-items: baseline;
+ gap: 30px;
+
+ 
+
+}
+
+.partners{
+  font-size: 1rem;
+}
+
+#toggleButton {
+  margin-top: 20px;
+  padding: 10px;
+ 
+  color: #fa07fa;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
