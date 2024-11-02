@@ -1,0 +1,80 @@
+<html>
+  <head>
+    <style>
+      form{
+        background: #efefef;
+        padding:2em;
+        /* by default haben diese einen Rahmen */
+      }
+      input[type="text"]{
+        margin-bottom: 1em;
+        padding: .25em;
+        border:0;
+        background: rgb(222, 116, 116);
+      }
+
+      button{
+        background: 0;
+        border:0;
+        /* buttons haben by deafault keien hover Status 
+        deswegen wird cursor averwendet - hover kann man aber trotzden stylen*/
+        cursor:pointer;
+      }
+
+      button:hover{
+        background: #404040;
+        color:white;
+      }
+    </style>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <h1>forms!</h1>
+    <!-- just introduction not working -->
+    <!-- form attr.: form action="/success.html" method="post"
+    many input types poosible -->
+    <form action="#" method="post">
+      <input type="text">
+      <input type="password">
+      <input type="color">
+      <!-- color picker -->
+      <input type="date" name="" id="">
+      <!-- kalender -->
+      <input type="file">
+      <!-- Datei anhängen -->
+        <br>
+<!-- label connects inut mit text -->
+      <label for="fname">First name:</label>
+        <input type="text" id="fname">
+      <label for="lname">last name:</label>
+        <input type="text" id="lname">
+      <label for="e-Mail">mail Address:</label>
+        <input type="text" id="e-Mail">
+        <!-- putting highlight - also border leuchtet auf Variante 1 -->
+        <input type="text" class="text">
+<br><br>
+
+<button type="submit">
+  send away
+</button>
+<button type="reset">reset</button>
+
+<br><br>
+<!-- delets everything which was typied in -->
+<!-- form attributes
+ gibt ganz viele/einige -->
+ <form action="#" method="post">
+  <input required type="text">
+  <input type="password">
+  <label for="lname">last name:</label>
+        <input type="text" required placeholder="Name eingeben">
+        <!-- nur placeholder schwierig zu lesen von Maschinen  also macht label geben Sinn den diese sind lesbar -->
+ <button type="submit">
+    send away
+  </button>
+ 
+ 
+
+    </form>
+  </body>
+</html>

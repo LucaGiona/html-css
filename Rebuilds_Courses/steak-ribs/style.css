@@ -1,0 +1,290 @@
+*{
+  box-sizing: border-box;
+  /* siehe unten extra wenn es nicht an ist*/
+}
+
+body{
+margin:0;
+font-family: 'Source Sans 3', sans-serif; 
+font-size: 1rem;
+color: #404040;
+text-align: center;
+} 
+/* typo */
+h1{
+
+  font-size: 2.25rem;
+  font-weight: 300;
+  color:#fff;
+  
+  order:0;
+  /* auf Order achten eht nur wenn im Container flex ist hier der Container = intro */
+  margin:0;
+  /* nach Order eingefügt - also ein ständiges hin und her 
+  später wird 2em wieder weggemacht da das Oben und Unten am Rand kleben soll
+  also wird margin:0;*/
+}
+h1 + p{
+  /* immediatly after h1 + combinater 
+  but generell ist es sicherer mit klassen zu arbeiten
+  alles was ~ wäre im div dann hier die Werte übernehmen*/
+  color:#f18119;
+  font-weight: 900;
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin:0;
+  
+}
+h2{
+  font-size: 1.3125rem;
+  margin:0;
+  /* margins werden heir später eingeführt wenn Schrift und so steht - so wird dies alles angepasst fürs Auge --hin und her  */
+}
+
+h2 + p {
+  font-weight: 900;
+  color: #f18119;
+  margin-top:0;
+  text-transform: uppercase;
+}
+.top-text {
+  margin:0; 
+  /* added default font so its stocked at the top */
+  padding-top: 2px;
+  font-size: .625rem;
+  font-weight: 900;
+  color:#f18119;
+  text-transform: uppercase;
+  order:-1;
+  border-top: 5px solid orange;
+  border-image: linear-gradient (to left, red, blue) 1;
+  /* border top - border-image not working */
+ 
+}
+
+.fine-print{
+  font-size: .625rem;
+  letter-spacing: 1px;
+ 
+
+}
+strong{
+  font-weight: 900;
+}
+
+/* intro section */
+
+.intro{
+  background-image: url(./images/dark-ribs.jpg), linear-gradient(75deg, rgb(243, 186, 186),rgb(10, 10, 234));
+  background-size: cover;
+  background-position: center;
+  /* background-color: #f48787; */
+  background-blend-mode: multiply;
+  /* es braucht ein Bild und ein Background-color */
+  /* falls das Bild langsam oder gar nicht lädt - image immer on top egal welche Reihenfolge*/
+  padding: 0em .5em 2em;
+  display: flex;
+  /* margins kolabrieren nicht mehr mit flex */
+  flex-direction: column;
+  justify-content: space-between;
+  /* justify-content: center; */
+  /* weg wegen h1 margin auf 0 gesetzt */
+  min-height: 50vh;
+  /* wird hier zugefügt damit Schrift nicht klebt */
+ 
+
+}
+
+
+/* main content
+============= */
+
+.main-content{
+  padding: 2em 1em;
+}
+
+/* ======
+Möglichkeit große Bildschirme zu kontrollieren
+Variante 1
+=========== */
+/* max width 
+> direkt child beeinflusst*/
+/* .intro  > *,
+.main-content > * {
+  max-width:400px;
+  margin-left: auto;
+  margin-right: auto;
+} */
+
+/* .intro > strong {
+  color:red;
+} */
+/* intro > strong wird nicht rot da es kein direktes Kind von .intro ist sondern von h1 */
+/* .intro * {
+  color:red;
+} */
+
+/* *everythng which is neted in the .intro turns red */
+
+/* ========
+Ende Variante 1
+========== */
+/* ======
+Möglichkeit große Bildschirme zu kontrollieren
+Variante 2
+=========== */
+/* add Div class container in html */
+
+/* .container{
+  max-width: 400px;
+  margin: 0 auto; */
+  /* aber alles gruppiert */
+  /* border: 1px solid red; */
+  /* deswegen modifier container-intro in html*/
+
+/* } */
+
+.container-intro{
+ /* copy-paste aus intro diplay flex etc */
+ display: flex;
+ /* margins kolabrieren nicht mehr mit flex */
+ flex-direction: column;
+ justify-content: space-between;
+ /* justify-content: center; */
+ /* weg wegen h1 margin auf 0 gesetzt */
+ min-height: 50vh;
+ /* wird hier zugefügt damit Schrift nicht klebt */
+}
+
+.intro > *,
+.main-content > * {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =========
+form
+============== */
+
+.email-collector{
+  /* border:3px solid orange; */
+  width: 80%;
+  max-width: 300px;
+  margin:0 auto;
+  
+}
+input,
+.btn {
+  width: 100%;
+  border-radius: 5px;
+  /* same width to his parent */
+  
+}
+input{
+  font-family: inherit;
+  text-align: inherit;
+  margin-bottom: .75em;
+  padding: .25em;
+  border: 1px solid #404040;
+  border-radius: 5px;
+  transform:scale(1);
+  transition:transform 250ms;
+}
+
+input:focus{
+  transform:scale(1.1)
+}
+
+.btn{
+  display: inline-block;
+  padding:.5em 1.5em;
+  font-size: .625rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border:0;
+  cursor: pointer;
+ 
+}
+
+.btn-primary{
+  background: linear-gradient(to left,#ffa51d, #ff713b);
+  color:white;
+  /* transition: color 500ms; */
+  /* background-color: #ff713b; */
+  /* transition: background-color 400ms; */
+  /* short cut for 4 diffrent prop
+  muss hier stehen da es im hover state wie auch im nicht hover state transition ausführt */
+  transform: scale(1);
+  /* wird größer ohne aber den Rest zu beeinflussen 
+  scale (3)*/
+  transition: transform 250ms;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  color: black;
+  transform: scale(1.15)
+  /* background-color: #d7fd00; 
+  tranistion can be hard for the browser*/
+}
+/* ==============
+media queries
+================ */
+
+
+@media (min-width:495px){
+
+  body{
+    font-size: 1.125rem;
+    display:flex;
+    /* im großem Layout steht alles nebeneinander*/
+  }
+  h1{
+    font-size: 3.5rem;
+  }
+  h2,
+  h1 + p{
+    font-size: 1.75rem;
+  }
+  .intro,
+  .main-content{
+    width:50%;
+    /* beide columns werden geteilt aer es ist noch nicht die komplette Lösung */
+    min-height: 100vh;
+    /* für extra unten ausschalten */
+    
+}
+.main-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  /* immer an der Cross achse also heir just. content */
+
+}
+.container-intro{
+  /* height: 100vh; */
+  height:100%;
+  /* background:pink; */
+  /* 100vh gibt Rand hier also sinnvoll 100% height */
+}
+}
+
+/* extra to be delated */
+
+/* .main-content{
+  box-sizing: content-box;
+  /* box nach content -by default
+  box = width+border+padding
+  content box: total width inkl. border padding */
+
+
+  /* padding:30px;
+  margin: 0;
+  width: 200px;
+  height:300px;
+  background-color: #f18119;
+  border: 1px solid black
+} */ 

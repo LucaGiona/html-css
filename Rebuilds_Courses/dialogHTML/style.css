@@ -1,0 +1,37 @@
+*{
+ margin: 0;
+ padding: 0;
+box-sizing: border-box;
+}
+
+body {
+ background-color: magenta;
+ margin: 2rem;
+}
+
+button{
+ padding: 1rem;
+ margin-top:15px;
+ border-radius: 50px;
+}
+
+dialog{
+ margin: 0 auto;
+ margin-top: 12rem;
+ border-radius: 10px;
+
+}
+
+.dialog-window{
+ padding: 15px;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ gap: 5px;
+ max-width: 65vw;
+}
+/* 
+::backdrop{
+ background-color: pink;
+} */

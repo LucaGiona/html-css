@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../Blog simple Life"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Blog simple Life"
+	}
+}

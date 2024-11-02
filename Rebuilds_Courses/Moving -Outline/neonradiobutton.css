@@ -1,0 +1,86 @@
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+  font-family: fantasy;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:100vh;
+  background-color: #141420;
+}
+
+.input-radio{
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.input-box{
+  padding-bottom: 3em;
+}
+
+.laber-radio{
+  position: relative;
+  display:block;
+  color:#fff;
+  letter-spacing: 1.6px;
+  font-size: 2rem;
+  padding-left: 3em;
+  cursor: pointer;
+  transition: color 0.5s;
+}
+.laber-radio::before,
+.laber-radio::after
+{
+  content:'';
+  position:absolute;
+  top:50%;
+  transform: translateY(-50%);
+  border-radius:50% ;
+
+}
+
+.laber-radio:before{
+  left:0;
+  width: 10px;
+  height:10px;
+  background-color: #00fffd;
+}
+
+.laber-radio::after{
+
+  left: -7px;
+  width: 20px;
+  height:20px;
+  border: 2px solid #00fffd;
+  box-shadow: 0px 0px 6px 1px #00fffd;
+  opacity: 0;
+}
+
+.input-radio:checked ~ .laber-radio::after{
+  opacity: 1;
+  animation: scale .5s;
+}
+
+.input-radio:checked ~ .laber-radio{
+
+  color: #00fffd;
+}
+
+@keyframes scale {
+  0% {
+    transform: translateY(-50%) scale(1.5);
+  }
+  50% {
+    transform: translateY(-50%) scale(.5);
+  }
+  100% {
+    transform: translateY(-50%) scale(1);
+  }
+
+  
+}
