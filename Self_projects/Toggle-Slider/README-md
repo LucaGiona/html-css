@@ -1,0 +1,45 @@
+Hier ist eine kurze README für dein CSS-basiertes Toggle-Button-Projekt in Englisch und Deutsch:
+
+---
+
+# CSS Toggle Button  
+<span style="color:rebeccapurple">CSS-Umschalter</span>  
+
+###### [Zur deutschen Version](#deutsche-version)
+##### *English*
+
+### Overview
+This project demonstrates a toggle switch created entirely with CSS. The switch changes color and position when activated, using CSS transitions for smooth animation.
+
+### CSS Structure
+
+- **Global Reset**: Removes default margins and padding with `* { margin: 0; padding: 0; }`.
+- **`.container` Class**: Centers the toggle switch within the viewport using flexbox.
+- **`.toggle` Class**: Creates the main switch body with rounded edges, shadow, and a color transition effect.
+- **`.circle` Class**: Represents the circular button inside the toggle. It changes position when the toggle is activated.
+- **`#check:checked` Selector**: When the checkbox is checked, the `.circle` moves to the opposite side, and `.toggle` changes its background color.
+
+### Usage
+Open the HTML file with this CSS in a browser, and click the toggle switch to see the animation effects.
+
+---
+
+## Deutsche Version
+
+### Projektübersicht
+Dieses Projekt zeigt einen Umschalter, der vollständig mit CSS erstellt wurde. Der Schalter ändert Farbe und Position, wenn er aktiviert wird, und nutzt CSS-Übergänge für eine fließende Animation.
+
+### CSS-Struktur
+
+- **Globaler Reset**: Entfernt Standardabstände mit `* { margin: 0; padding: 0; }`.
+- **`.container` Klasse**: Zentriert den Umschalter im Ansichtsfenster mit Flexbox.
+- **`.toggle` Klasse**: Erzeugt den Hauptkörper des Schalters mit abgerundeten Kanten, Schatten und einem Farb-Übergangseffekt.
+- **`.circle` Klasse**: Stellt die runde Schaltfläche innerhalb des Umschalters dar, die sich bei Aktivierung des Schalters bewegt.
+- **`#check:checked` Selektor**: Wenn das Kontrollkästchen aktiviert ist, bewegt sich `.circle` zur anderen Seite, und die Hintergrundfarbe von `.toggle` ändert sich.
+
+### Verwendung
+Öffne die HTML-Datei mit diesem CSS in einem Browser und klicke auf den Umschalter, um die Animationseffekte zu sehen.
+
+--- 
+
+Diese README gibt eine kurze Erklärung der CSS-Struktur und zeigt, wie der Toggle-Effekt erzielt wird.
